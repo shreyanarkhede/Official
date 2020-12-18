@@ -1,0 +1,43 @@
+---
+title: "Data structure_List"
+author: "Shreya Narkhede"
+date: "19/12/2020"
+output: word_document
+---
+
+```{r}
+# Lists - This function is used to store any number of items of any type and can contain either numeric or characters.
+# By using the "list" function we make each argument in "list" to become the element of the list.
+l1=10:1
+m1=-4:5
+q= c("Hockey","Football","Baseball","Tennis","Curling","Badminton","Rugby","S
+occer","Carom","Ludo")
+theDF= data.frame(l1,m1,q)
+theDF
+q= as.factor(q)
+q
+theDF=data.frame(First=l1, Second=m1, Sport=q) # Assigning names to the columns in the data frame.
+theDF
+list(1,2,3)# Here we are creating a three element list
+list1=(c(1,2,3))# Here we are creating a single vector element which contains Three elements.
+list1
+list2 = list(c(1,2,3), 3:7) # Creating a two element list with one element having 3 vector elements
+list2
+# We can also create a two element list combining a date frame and a vector.
+list(theDF, 1:10) # Here theDF is a Data.frame that we have created above and the next is a vector with 10 elements.
+# We can also create a list of elements by combining anotherr list in the data.
+list3 = list(theDF, 1:10, list1)
+list3
+#We can also name the list in R
+names(list3)= c("data.frame", "vector","list")
+names(list3)
+list3
+# Accessing individual element of a list
+# We use Double Square Brackets[] to asses the individual elements in any list by specifying the name or element type inside the square bracket.
+list3[[1]] # Here we are assessing the first element i.e., the dataframe of the list 3 by specifying the position of the element.
+list3[["data.frame"]] # We can also assess the element of a list by specifying the element name in the list.using dollar sign inside a square brackets.
+list3[[1]]$Sport
+# We can find the Length of the list and the heading of the different elements in the list by using the length and names function respectively in R.
+length(list3)
+names(list3)
+```
