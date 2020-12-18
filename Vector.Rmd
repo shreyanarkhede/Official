@@ -1,0 +1,130 @@
+---
+title: "Data structure_Vector"
+author: "Shreya Narkhede"
+date: "19/12/2020"
+output: word_document
+---
+
+```{r}
+#Vectors
+#Vector R is called as Vectorised Language.
+# A collection of elements, and all are of same types.
+# It cannot be of mixed type.
+# Arrays- n-Dimension COllection of Similar elements in terms of R
+#Matrices- Subset of Arrays. 2-d array is called matrix.
+# Will usually contain "numeric" value.
+x=c(1,2,3,4,5,6,7,8,9,10)
+x*3
+x+2
+x-2
+x/4
+x^2
+sqrt(x)
+# sequencing
+1:10
+10:1
+x= 1:10
+y=-5:4
+x+y
+x*y
+x/y
+length(x)
+length(y)
+x<=5
+x<y
+x[1]
+x[1:2]
+c(One="a", Two="y", Last="r")
+w=1:3
+names(w)=c("a","b","c")
+w
+#Baisc operations for getting LENGTH of vector
+# We can also check the lenght of each vector by using the LENGTH function
+# Two Vectors
+l=1:10
+m=-5:4
+length(l)
+length(m)
+# Unequal length vectors
+l+c(1,2)
+# when the other vector is of unequal length then the number start getting repeated.
+l+c(1,2,3)
+
+# We can also do comparison on vectors
+l<=5
+l<y
+
+# Vector comparison -"any" and "all"
+l1= 10:1
+m1= -4:5
+any(l1<m1) # Any function help us in comparing whether any of the element of the vector is satisfying the condition or not.
+any(l1>m1)
+anyDuplicated(l1)
+all(l1<m1) # All function help us in comparing whether all the element of the vector is satisfying the condition or not. 
+
+#nchar function
+# The "nchar" Gives the number of character in a wach word of the elements.
+q=c("Hockey","Football","Baseball","Rugby","Tennis")
+nchar(q)
+
+#Subscripting function
+# Subscripting: Assesing "Individual element" in vector
+# Subscripting denoted by Square bracket or Square Bracket is used to target the selected element in the vector.
+x[1]
+x[7]
+q[3]
+q[1:3]
+# Provides the value of of 1st,2nd,and 3rd element.
+q[c(1,4)] # Provides the value of 1st and 4th element in the Q data sets.
+
+#Naming Vectors
+# We can also give name to a vector.
+c(One="a", Two="b", Last="r")
+w=1:3
+names(w)=c("a","b","c")
+w
+# Factor Vectors- OrdinalData
+q
+class(q)
+
+#Converting elements to factor data type
+# converting "q" to factors
+q_F= as.factor(q) # assigning Factor to q
+q_F
+as.numeric(q_F) # Assigning Numeric function to q_F
+as.factor(q)
+as.numeric(q)
+class(q)
+class(q_F)
+# R has two types of missing data- NA and NULL
+# NA= Actual Missing Value
+# NULL= Absence of anything.
+z=c(1,2,NA,8,3,NA,3)# R treats NA as an empty element and hence, NA is shown in the final output.
+z
+z=c(1,2,8,3,3) # R is a case sensitive platform and hence, na is treated differently as NA.
+z
+is.na(z)
+list(z)
+z_char=c("Hockey",NA,"Cricket")
+z_char
+is.na(z_char) # here na function checks whether there is any NA element in the vector.
+
+#NULL and NA
+# NULL
+z1=c(1,NULL,3)
+z1
+# R treats NULL as an empty cell and hence it doesn't consider it in the final output.
+x1=c(1,NA,3)
+x1
+length(z)
+length(z1)
+length(x1)
+
+# Assigning NULL and checking
+d=NULL# Assigning D as a NULL element
+is.null(d)
+is.null(z1)
+is.null(x1)
+is.na(z1) # here the NULL element is not counted.
+is.na(x1)
+```
