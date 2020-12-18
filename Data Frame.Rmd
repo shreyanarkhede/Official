@@ -1,0 +1,41 @@
+---
+title: "Data Frame"
+author: "Shreya Narkhede"
+date: "11/12/2020"
+output: word_document
+---
+
+```{r}
+# Creating a Data frame
+l1=10:1
+m1=-4:5
+q= c("Hockey","Football","Baseball","Tennis","Curling","Badminton","Rugby","S
+occer","Carom","Ludo")
+# We use the data.frame function to create a data frame or table combining various data sets.
+theDF= data.frame(l1,m1,q)
+theDF
+q= as.factor(q)
+q
+theDF=data.frame(First=l1, Second=m1, Sport=q) # Assigning names to the colums in the data frame.
+theDF
+# Str-Structure- Gives the whole structure of the data frame or table by explaining the total number of outcomes and also telling about the each columns seperately.
+str(theDF)
+# Checking the dimensions
+nrow(theDF) # Provides the number of Row in the Data Frame
+ncol(theDF) # Provides the number of columns in the Data Frame
+dim(theDF) # Provides the number of both rows and columns together in the Data Frame.
+# Gives the Columns name starting from the First Columnnames(theDF)
+# Gives only the Colun Heading of the Third Column as square bracked is always used to select a particular element.
+names(theDF)[3]
+
+#HEAD and TAIL function
+# Square bracket is always used for accessing a particular data
+# Head and Tail
+head(theDF) # Gives the First 6 rows with all variables
+tail(theDF) # Gives the Last 6 rows with all variables
+tail(theDF, n=2) # It gives only the last 2 rows with all variables of the data set.
+class(theDF)
+# Accessing individual column
+# For accessing individual column we use the ($) Dollar sign.
+theDF$Sport # Here we only want the data variables of only the Sport column so we used the $ sign. Also, it provides the Levels and this level is organized in alphabetical order with only unique variables.
+```
