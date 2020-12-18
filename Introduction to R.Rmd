@@ -1,0 +1,51 @@
+---
+title: "Introduction to R"
+author: "Shreya Narkhede"
+date: "18/12/2020"
+output: word_document
+---
+
+```{r}
+#Introduction to R
+# Getting Working Directory
+getwd()
+
+help()
+# starting httpd help server ... done
+# Ctrl+ enter- to run the command
+# Ctrl+(1,2,3,4)- to directly get into the command,console,environment and th
+
+#Assigning objects and values
+x=5
+y=10
+#Doing basic arithemetic operations in R
+x*y # Basic Multiplication
+
+x/y # Basic Division
+
+x^y
+
+# Gives the value of x raised to the power y
+sqrt(x) # Gives the square root of x
+
+exp(x) # Provides the exponential of x
+
+log10(x)
+
+x**y # Gives the value of x raised to the power y
+
+# Assigning a different object
+a=x*y
+a
+
+z<-x-y
+z
+
+class(a)
+
+# The class function tells us about the Datatype.
+a= "Hello" # Assigning Characters to the variables
+a
+
+class(a)
+
